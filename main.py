@@ -77,9 +77,9 @@ coffee_variety = st.radio("Select the variety of your Coffee:",
 coffee_type = st.radio("Select the type of Coffee you will sell:",
                        ("Fresh", "Green Coffee Beans", "Both"))
 if coffee_type == "Green Coffee Beans":
-    st.header("Selling Green Coffee Beans:")
     amount_fc = 0
     amount_gcb = st.number_input(label="Enter the amount of Green Coffee Beans you will sell (in kilos)", min_value=0.00, step=5.00)
+    st.header("Selling Green Coffee Beans:")
     st.subheader("Big companies (e.g. Nestle)")
     sellto_bigcompaniesgcb = st.radio("Will you sell to Big Companies (e.g. Nestle)?",
                               ("Yes", "No"))
@@ -191,9 +191,9 @@ if coffee_type == "Both":
         price_coopgcb = 0
     type_of_allocation =  "Yes"
 if coffee_type == "Fresh":
-    st.header("Selling Fresh Cherries:")
     amount_fc = st.number_input(label="Enter the total amount of fresh coffee cherries you will sell (in kilos)", min_value=0.00, step=0.5)
     amount_gcb = 0
+    st.header("Selling Fresh Cherries:")
     st.subheader("Traders")
     sellto_traders = st.radio("Will you sell to Traders?",
                               ("Yes", "No"))

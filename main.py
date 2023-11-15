@@ -84,7 +84,7 @@ if coffee_type == "Green Coffee Beans":
     sellto_bigcompaniesgcb = st.radio("Will you sell to Big Companies (e.g. Nestle)?",
                               ("Yes", "No"))
     if sellto_bigcompaniesgcb == "Yes":
-        percent_bigcompaniesgcb = st.number_input(label="Enter the percentage of Green Coffee Beans to be allocated to Big Companies in kilograms (kg)", min_value=0.00, max_value=100.00, step=10.00)
+        percent_bigcompaniesgcb = st.number_input(label="Enter the percentage of Green Coffee Beans to be allocated to Big Companies", min_value=0.00, max_value=100.00, step=10.00)
         price_bigcompaniesgcb = st.number_input(label="Enter the price of Green Coffee Beans when sold to Big Companies in pesos (php)", min_value=0.00, step=10.00)
     elif sellto_bigcompaniesgcb == "No":
         percent_bigcompaniesgcb = 0
@@ -94,7 +94,7 @@ if coffee_type == "Green Coffee Beans":
     sellto_tradersgcb = st.radio("Will you sell to Traders?",
                               ("Yes", "No"))
     if sellto_tradersgcb == "Yes":
-        percent_tradersgcb = st.number_input(label="Enter the percentage of Green Coffee Beans to be allocated to Traders in kilograms (kg)", min_value=0.00, max_value=100.00 - percent_bigcompaniesgcb, step=10.00)
+        percent_tradersgcb = st.number_input(label="Enter the percentage of Green Coffee Beans to be allocated to Traders", min_value=0.00, max_value=100.00 - percent_bigcompaniesgcb, step=10.00)
         price_tradersgcb = st.number_input(label="Enter the price of Green Coffee Beans when sold to Traders in pesos (php)", min_value=0.00, step=10.00)
     elif sellto_tradersgcb == "No":
         percent_tradersgcb = 0
@@ -106,7 +106,7 @@ if coffee_type == "Green Coffee Beans":
     sellto_othermarketsgcb = st.radio("Will you sell to Other Markets (e.g. Supermarkets, Coffee Shops, etc.)?",
                               ("Yes", "No"))
     if sellto_othermarketsgcb == "Yes":
-        percent_othermarketsgcb = st.number_input(label="Enter the percentage of Green Coffee Beans to be allocated to Other Markets in kilograms (kg)", min_value=0.00, max_value=max_remaining_percentage, step=10.00)
+        _othermarketsgcb = st.number_input(label="Enter the percentage of Green Coffee Beans to be allocated to Other Markets", min_value=0.00, max_value=max_remaining_percentage, step=10.00)
         price_othermarketsgcb = st.number_input(label="Enter the price of Green Coffee Beans when sold to Other Markets in pesos (php)", min_value=0.00, step=10.00)
     elif sellto_othermarketsgcb == "No":
         percent_othermarketsgcb = 0
@@ -118,7 +118,7 @@ if coffee_type == "Green Coffee Beans":
     sellto_coopgcb = st.radio("Will you sell to a Cooperative?",
                               ("Yes", "No"))
     if sellto_coopgcb == "Yes":
-        percent_coopgcb = st.number_input(label="Enter the percentage of Green Coffee Beans to be allocated to the Cooperative in kilograms (kg)", min_value=0.00, max_value=max_remaining_percentage, step=10.00)
+        percent_coopgcb = st.number_input(label="Enter the percentage of Green Coffee Beans to be allocated to the Cooperative", min_value=0.00, max_value=max_remaining_percentage, step=10.00)
         price_coopgcb = st.number_input(label="Enter the price of Green Coffee Beans when sold to the Cooperative in pesos (php)", min_value=0.00, step=10.00)
     elif sellto_coopgcb == "No":
         percent_coopgcb = 0
@@ -134,7 +134,7 @@ if coffee_type == "Both":
     sellto_traders = st.radio("Will you sell fresh cherries to Traders?",
                               ("Yes", "No"))
     if sellto_traders == "Yes":
-        percent_traders = st.number_input(label="Enter the percentage of Fresh Coffee Cherries to be allocated to Traders in kilograms (kg)", min_value=0.00, max_value=100.00, step=10.00)
+        percent_traders = st.number_input(label="Enter the percentage of Fresh Coffee Cherries to be allocated to Traders", min_value=0.00, max_value=100.00, step=10.00)
         price_traders = st.number_input(label="Enter the price of Fresh Coffee Cherries when sold to Traders in pesos (php)", min_value=0.00, step=10.00)
     elif sellto_traders == "No":
         percent_traders = 0
@@ -143,7 +143,7 @@ if coffee_type == "Both":
     sellto_othermarkets = st.radio("Will you sell fresh cherries to Other Markets (e.g. Supermarkets, Coffee Shops) ?",
                               ("Yes", "No"))
     if sellto_othermarkets == "Yes":
-        percent_othermarkets = st.number_input(label="Enter the percentage of Fresh Coffee Cherries to be allocated to Other Markets in kilograms (kg)", min_value=0.00, max_value=100.00-percent_traders, step=10.00)
+        percent_othermarkets = st.number_input(label="Enter the percentage of Fresh Coffee Cherries to be allocated to Other Markets", min_value=0.00, max_value=100.00-percent_traders, step=10.00)
         price_othermarkets = st.number_input(label="Enter the price of Fresh Coffee Cherries when sold to Other Markets in pesos (php)", min_value=0.00, step=10.00)
     elif sellto_othermarkets == "No":
         percent_othermarkets = 0
@@ -153,7 +153,7 @@ if coffee_type == "Both":
     sellto_bigcompaniesgcb = st.radio("Will you sell to Big Companies (e.g. Nestle, etc.)?",
                               ("Yes", "No"))
     if sellto_bigcompaniesgcb == "Yes":
-        percent_bigcompaniesgcb = st.number_input(label="Enter the percentage of Green Coffee Beans to be allocated to Big Companies in kilograms (kg)", min_value=0.00, max_value=100.00, step=10.00)
+        percent_bigcompaniesgcb = st.number_input(label="Enter the percentage of Green Coffee Beans to be allocated to Big Companies", min_value=0.00, max_value=100.00, step=10.00)
         price_bigcompaniesgcb = st.number_input(label="Enter the price of Green Coffee Beans when sold to Big Companies in pesos (php)", min_value=0.00, step=10.00)
     elif sellto_bigcompaniesgcb == "No":
         percent_bigcompaniesgcb = 0
@@ -162,7 +162,7 @@ if coffee_type == "Both":
     sellto_tradersgcb = st.radio("Will you sell to Traders?",
                               ("Yes", "No"))
     if sellto_tradersgcb == "Yes":
-        percent_tradersgcb = st.number_input(label="Enter the percentage of Green Coffee Beans to be allocated to Traders in kilograms (kg)", min_value=0.00, max_value=100.00 - percent_bigcompaniesgcb, step=10.00)
+        percent_tradersgcb = st.number_input(label="Enter the percentage of Green Coffee Beans to be allocated to Traders", min_value=0.00, max_value=100.00 - percent_bigcompaniesgcb, step=10.00)
         price_tradersgcb = st.number_input(label="Enter the price of Green Coffee Beans when sold to Traders in pesos (php)", min_value=0.00, step=10.00)
     elif sellto_tradersgcb == "No":
         percent_tradersgcb = 0
@@ -173,7 +173,7 @@ if coffee_type == "Both":
     sellto_othermarketsgcb = st.radio("Will you sell to Other Markets (e.g. Supermarkets, Coffee Shops, etc.)?",
                               ("Yes", "No"))
     if sellto_othermarketsgcb == "Yes":
-        percent_othermarketsgcb = st.number_input(label="Enter the percentage of Green Coffee Beans to be allocated to Other Markets in kilograms (kg)", min_value=0.00, max_value=max_remaining_percentage, step=10.00)
+        percent_othermarketsgcb = st.number_input(label="Enter the percentage of Green Coffee Beans to be allocated to Other Markets", min_value=0.00, max_value=max_remaining_percentage, step=10.00)
         price_othermarketsgcb = st.number_input(label="Enter the price of Green Coffee Beans when sold to Other Markets in pesos (php)", min_value=0.00, step=10.00)
     elif sellto_othermarketsgcb == "No":
         percent_othermarketsgcb = 0
@@ -184,7 +184,7 @@ if coffee_type == "Both":
     sellto_coopgcb = st.radio("Will you sell to a Cooperative?",
                               ("Yes", "No"))
     if sellto_coopgcb == "Yes":
-        percent_coopgcb = st.number_input(label="Enter the percentage of Green Coffee Beans to be allocated to the Cooperative in kilograms (kg)", min_value=0.00, max_value=max_remaining_percentage, step=10.00)
+        percent_coopgcb = st.number_input(label="Enter the percentage of Green Coffee Beans to be allocated to the Cooperative", min_value=0.00, max_value=max_remaining_percentage, step=10.00)
         price_coopgcb = st.number_input(label="Enter the price of Green Coffee Beans when sold to the Cooperative in pesos (php)", min_value=0.00, step=10.00)
     elif sellto_coopgcb == "No":
         percent_coopgcb = 0
@@ -198,7 +198,7 @@ if coffee_type == "Fresh":
     sellto_traders = st.radio("Will you sell to Traders?",
                               ("Yes", "No"))
     if sellto_traders == "Yes":
-        percent_traders = st.number_input(label="Enter the percentage of Fresh Coffee Cherries to be allocated to Traders in kilograms (kg)", min_value=0.00, max_value=100.00, step=10.00)
+        percent_traders = st.number_input(label="Enter the percentage of Fresh Coffee Cherries to be allocated to Traders", min_value=0.00, max_value=100.00, step=10.00)
         price_traders = st.number_input(label="Enter the price of Fresh Coffee Cherries when sold to Traders in pesos (php)", min_value=0.00, step=1.00)
     elif sellto_traders == "No":
         percent_traders = 0
@@ -207,7 +207,7 @@ if coffee_type == "Fresh":
     sellto_othermarkets = st.radio("Will you sell to Other Markets (e.g. Supermarkets, Coffee Shops, etc.)?",
                               ("Yes", "No"))
     if sellto_othermarkets == "Yes":
-        percent_othermarkets = st.number_input(label="Enter the percentage of Fresh Coffee Cherries to be allocated to Other Markets in kilograms (kg)", min_value=0.00, max_value=100.00-percent_traders, step=10.00)
+        percent_othermarkets = st.number_input(label="Enter the percentage of Fresh Coffee Cherries to be allocated to Other Markets", min_value=0.00, max_value=100.00-percent_traders, step=10.00)
         price_othermarkets = st.number_input(label="Enter the price of Fresh Coffee Cherries when sold to Other Markets in pesos (php)", min_value=0, step=1)
     elif sellto_othermarkets == "No":
         percent_othermarkets = 0
